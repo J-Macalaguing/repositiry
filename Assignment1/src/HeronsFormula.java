@@ -10,7 +10,7 @@ public class HeronsFormula {
         double b = k.nextDouble();
         System.out.println("give me side c");
         double c = k.nextDouble();
-        double area = 0.25 * Math.sqrt((4 * (a * a) * (b * b)) - ((a * a) + (b * b) - (c * c)));
+        double area = 0.25 * Math.sqrt((4 * a * a * (b * b)) - ((a * a) + (b * b) - (c * c)));
         System.out.println("area is " + area);
     }
 }
