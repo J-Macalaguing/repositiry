@@ -1,7 +1,6 @@
 import java.util.Scanner;
 
 public class TicTacToe {
-
     public static void main(String[] args) {
         Scanner kb = new Scanner(System.in);
         String[][] board = { { "1", "2", "3" }, { "4", "5", "6" }, { "7", "8", "9" } };
@@ -9,9 +8,33 @@ public class TicTacToe {
         System.out.println("HOW TO PLAY:");
         System.out.println("Input the number you would like to place your move.");
 
-        //method that prints board goes here?
+        // would be using methods if i knew how
 
-        while (true) {
+        for (int turn = 0; turn < 10; turn++) {
+            String player = "X";
+            if (turn == 1) {
+                player = "O";
+            }
+            if (turn == 3) {
+                player = "O";
+            }
+            if (turn == 5) {
+                player = "O";
+            }
+            if (turn == 7) {
+                player = "O";
+            }
+            if (turn == 9) {
+                System.out.println(" ");
+                System.out.println(" " + board[0][0] + " | " + board[0][1] + " | " + board[0][2]);
+                System.out.println(" --+---+--");
+                System.out.println(" " + board[1][0] + " | " + board[1][1] + " | " + board[1][2]);
+                System.out.println(" --+---+--");
+                System.out.println(" " + board[2][0] + " | " + board[2][1] + " | " + board[2][2]);
+                System.out.println("ITS A tie.");
+                break;
+            }
+            System.out.println(" ");
             System.out.println(player + "'S TURN");
             System.out.println(" " + board[0][0] + " | " + board[0][1] + " | " + board[0][2]);
             System.out.println(" --+---+--");
@@ -19,7 +42,6 @@ public class TicTacToe {
             System.out.println(" --+---+--");
             System.out.println(" " + board[2][0] + " | " + board[2][1] + " | " + board[2][2]);
 
-            String player = "X";//dont know how but change player every time
             int move = kb.nextInt();
             if (move == 1) {
                 board[0][0] = player;
@@ -131,7 +153,6 @@ public class TicTacToe {
                 System.out.println(player + " WINS!!!");
                 break;
             }
-            player.replace("X", "O");//doesnt work because player is declared as "X" every loop
         }
     }
 }
