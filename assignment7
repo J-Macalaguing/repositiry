@@ -1,0 +1,60 @@
+import java.util.Scanner;
+
+public class TicTacToe {
+    public static void main(String[] args) {
+        Scanner kb = new Scanner(System.in);
+        String[][] board = { { "1", "2", "3" }, { "4", "5", "6" }, { "7", "8", "9" } };
+        System.out.println("WELCOME TO TIC TAC TOE!!!");
+        System.out.println("HOW TO PLAY:");
+        System.out.println("Input the number that you want your X or O to be in.");
+        System.out.println(" ");
+
+        while (true) {
+            String player = "X";
+            System.out.println(player + "'S TURN");//remember to switch x with o depending on whos turn it is
+            System.out.println(" " + board[0][0] + " | " + board[0][1] + " | " + board[0][2]);
+            System.out.println(" ---------");
+            System.out.println(" " + board[1][0] + " | " + board[1][1] + " | " + board[1][2]);
+            System.out.println(" ---------");
+            System.out.println(" " + board[2][0] + " | " + board[2][1] + " | " + board[2][2]);
+
+            int move = kb.nextInt();
+            if (move == 1) {
+                board[0][0] = player;
+            }
+            if (move == 2) {
+                board[0][1] = player;
+            }
+            if (move == 3) {
+                board[0][2] = player;
+            }
+            if (move == 4) {
+                board[1][0] = player;
+            }
+            if (move == 5) {
+                board[1][1] = player;
+            }
+            if (move == 6) {
+                board[1][2] = player;
+            }
+            if (move == 7) {
+                board[2][0] = player;
+            }
+            if (move == 8) {
+                board[2][1] = player;
+            }
+            if (move == 9) {
+                board[2][2] = player;
+            }
+            player.replace("X", "O");
+        }
+    }
+}
+/*
+ * TO DO:
+ * - figure out how to use 2d arrays
+ * - anticipate what square the user inputs, who does it (set turns, x goes
+ * first)
+ * - make it so three in a row wins
+ * - fucl
+ */
