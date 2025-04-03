@@ -9,7 +9,7 @@ public class TicTacToe {
         System.out.println("HOW TO PLAY:");
         System.out.println("Input the number that you want your X or O to be in.");
 
-        //method that prints board goes here
+        //method that prints board goes here?
 
         while (true) {
             System.out.println(" ");
