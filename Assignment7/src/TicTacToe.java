@@ -8,7 +8,7 @@ public class TicTacToe {
         System.out.println("HOW TO PLAY:");
         System.out.println("Input the number you would like to place your move.");
 
-        // would be using methods if i knew how
+        // would be using methods if i knew how :(
 
         for (int turn = 0; turn < 10; turn++) {
             String player = "X";
