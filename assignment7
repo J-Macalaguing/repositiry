@@ -7,7 +7,7 @@ public class TicTacToe {
         String[][] board = { { "1", "2", "3" }, { "4", "5", "6" }, { "7", "8", "9" } };
         System.out.println("WELCOME TO TIC TAC TOE!!!");
         System.out.println("HOW TO PLAY:");
-        System.out.println("Input the number that you want your X or O to be in.");
+        System.out.println("Input the number you would like to place your move.");
 
         //method that prints board goes here?
 
