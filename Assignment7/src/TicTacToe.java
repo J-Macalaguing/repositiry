@@ -1,6 +1,13 @@
 import java.util.Scanner;
 
 public class TicTacToe {
+    public static void printBoard(String[][] board) {
+        System.out.println(" " + board[0][0] + " | " + board[0][1] + " | " + board[0][2]);
+            System.out.println(" --+---+--");
+            System.out.println(" " + board[1][0] + " | " + board[1][1] + " | " + board[1][2]);
+            System.out.println(" --+---+--");
+            System.out.println(" " + board[2][0] + " | " + board[2][1] + " | " + board[2][2]);
+    }
     public static void main(String[] args) {
         Scanner kb = new Scanner(System.in);
         String[][] board = { { "1", "2", "3" }, { "4", "5", "6" }, { "7", "8", "9" } };
@@ -26,21 +33,13 @@ public class TicTacToe {
             }
             if (turn == 9) {
                 System.out.println(" ");
-                System.out.println(" " + board[0][0] + " | " + board[0][1] + " | " + board[0][2]);
-                System.out.println(" --+---+--");
-                System.out.println(" " + board[1][0] + " | " + board[1][1] + " | " + board[1][2]);
-                System.out.println(" --+---+--");
-                System.out.println(" " + board[2][0] + " | " + board[2][1] + " | " + board[2][2]);
+                printBoard(board);
                 System.out.println("ITS A tie.");
                 break;
             }
             System.out.println(" ");
             System.out.println(player + "'S TURN");
-            System.out.println(" " + board[0][0] + " | " + board[0][1] + " | " + board[0][2]);
-            System.out.println(" --+---+--");
-            System.out.println(" " + board[1][0] + " | " + board[1][1] + " | " + board[1][2]);
-            System.out.println(" --+---+--");
-            System.out.println(" " + board[2][0] + " | " + board[2][1] + " | " + board[2][2]);
+            printBoard(board);
 
             int move = kb.nextInt();
             if (move == 1) {
@@ -73,83 +72,44 @@ public class TicTacToe {
             // horizontal wins
             if (board[0][0] == player && board[0][1] == player && board[0][2] == player) {
                 System.out.println(" ");
-                System.out.println(" " + board[0][0] + " | " + board[0][1] + " | " + board[0][2]);
-                System.out.println(" --+---+--");
-                System.out.println(" " + board[1][0] + " | " + board[1][1] + " | " + board[1][2]);
-                System.out.println(" --+---+--");
-                System.out.println(" " + board[2][0] + " | " + board[2][1] + " | " + board[2][2]);
+                printBoard(board);
                 System.out.println(player + " WINS!!!");
                 break;
             }
             if (board[1][0] == player && board[1][1] == player && board[1][2] == player) {
-                System.out.println(" ");
-                System.out.println(" " + board[0][0] + " | " + board[0][1] + " | " + board[0][2]);
-                System.out.println(" --+---+--");
-                System.out.println(" " + board[1][0] + " | " + board[1][1] + " | " + board[1][2]);
-                System.out.println(" --+---+--");
-                System.out.println(" " + board[2][0] + " | " + board[2][1] + " | " + board[2][2]);
+                printBoard(board);
                 System.out.println(player + " WINS!!!");
                 break;
             }
             if (board[2][0] == player && board[2][1] == player && board[2][2] == player) {
-                System.out.println(" ");
-                System.out.println(" " + board[0][0] + " | " + board[0][1] + " | " + board[0][2]);
-                System.out.println(" --+---+--");
-                System.out.println(" " + board[1][0] + " | " + board[1][1] + " | " + board[1][2]);
-                System.out.println(" --+---+--");
-                System.out.println(" " + board[2][0] + " | " + board[2][1] + " | " + board[2][2]);
+                printBoard(board);
                 System.out.println(player + " WINS!!!");
                 break;
             }
             // vertical wins
             if (board[0][0] == player && board[1][0] == player && board[2][0] == player) {
-                System.out.println(" ");
-                System.out.println(" " + board[0][0] + " | " + board[0][1] + " | " + board[0][2]);
-                System.out.println(" --+---+--");
-                System.out.println(" " + board[1][0] + " | " + board[1][1] + " | " + board[1][2]);
-                System.out.println(" --+---+--");
-                System.out.println(" " + board[2][0] + " | " + board[2][1] + " | " + board[2][2]);
+                printBoard(board);
                 System.out.println(player + " WINS!!!");
                 break;
             }
             if (board[0][1] == player && board[1][1] == player && board[2][1] == player) {
-                System.out.println(" ");
-                System.out.println(" " + board[0][0] + " | " + board[0][1] + " | " + board[0][2]);
-                System.out.println(" --+---+--");
-                System.out.println(" " + board[1][0] + " | " + board[1][1] + " | " + board[1][2]);
-                System.out.println(" --+---+--");
-                System.out.println(" " + board[2][0] + " | " + board[2][1] + " | " + board[2][2]);
+                printBoard(board);
                 System.out.println(player + " WINS!!!");
                 break;
             }
             if (board[0][2] == player && board[1][2] == player && board[2][2] == player) {
-                System.out.println(" ");
-                System.out.println(" " + board[0][0] + " | " + board[0][1] + " | " + board[0][2]);
-                System.out.println(" --+---+--");
-                System.out.println(" " + board[1][0] + " | " + board[1][1] + " | " + board[1][2]);
-                System.out.println(" --+---+--");
-                System.out.println(" " + board[2][0] + " | " + board[2][1] + " | " + board[2][2]);
+                printBoard(board);
                 System.out.println(player + " WINS!!!");
                 break;
             }
             // diagonal wins
             if (board[0][0] == player && board[1][1] == player && board[2][2] == player) {
-                System.out.println(" ");
-                System.out.println(" " + board[0][0] + " | " + board[0][1] + " | " + board[0][2]);
-                System.out.println(" --+---+--");
-                System.out.println(" " + board[1][0] + " | " + board[1][1] + " | " + board[1][2]);
-                System.out.println(" --+---+--");
-                System.out.println(" " + board[2][0] + " | " + board[2][1] + " | " + board[2][2]);
+                printBoard(board);
                 System.out.println(player + " WINS!!!");
                 break;
             }
             if (board[0][2] == player && board[1][1] == player && board[2][0] == player) {
-                System.out.println(" ");
-                System.out.println(" " + board[0][0] + " | " + board[0][1] + " | " + board[0][2]);
-                System.out.println(" --+---+--");
-                System.out.println(" " + board[1][0] + " | " + board[1][1] + " | " + board[1][2]);
-                System.out.println(" --+---+--");
-                System.out.println(" " + board[2][0] + " | " + board[2][1] + " | " + board[2][2]);
+                printBoard(board);
                 System.out.println(player + " WINS!!!");
                 break;
             }
